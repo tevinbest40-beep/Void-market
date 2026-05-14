@@ -1,23 +1,31 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
+  background: radial-gradient(circle at top, #0d0d0d, #000000);
+  color: #00ffcc;
 }
 
+/* HEADER */
 header {
   text-align: center;
-  padding: 20px;
-  background: black;
+  padding: 25px;
+  background: linear-gradient(90deg, #0f0f0f, #111);
   border-bottom: 2px solid #00ffcc;
+  box-shadow: 0 0 15px #00ffcc;
 }
 
 header h1 {
   margin: 0;
-  color: #00ffcc;
-  letter-spacing: 2px;
+  font-size: 32px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px #00ffcc;
 }
 
+header p {
+  color: #aaa;
+}
+
+/* FORM */
 .form {
   padding: 20px;
   display: flex;
@@ -26,34 +34,80 @@ header h1 {
 }
 
 input {
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  background: #111;
+  color: #00ffcc;
+  outline: none;
+  border: 1px solid #00ffcc33;
+}
+
+input:focus {
+  border-color: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
 }
 
 button {
-  padding: 10px;
-  background: #00ffcc;
+  padding: 12px;
+  background: linear-gradient(90deg, #00ffcc, #00bfa6);
   border: none;
   cursor: pointer;
   font-weight: bold;
+  color: black;
+  border-radius: 6px;
+  transition: 0.2s;
 }
 
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* POSTS GRID */
 #posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
   padding: 20px;
 }
 
+/* CARD */
 .card {
-  background: #1a1a1a;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #00ffcc;
+  background: #0f0f0f;
+  border: 1px solid #00ffcc33;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 10px #00ffcc22;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00ffcc55;
 }
 
 .card img {
   width: 100%;
   border-radius: 10px;
+  border: 1px solid #00ffcc33;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
 }
